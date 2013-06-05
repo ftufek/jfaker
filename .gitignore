@@ -4,3 +4,13 @@
 *.jar
 *.war
 *.ear
+
+.classpath
+.project
+bin/
+gen/
+*.class
+.settings/
+.DS_Store
+log/
+target/
