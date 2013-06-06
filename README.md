@@ -11,46 +11,46 @@ faker.Lorem.words(10);
 ```
 
 ## API
-Name
-    firstName
-    lastName
-    findName
+* Name
+	* firstName
+	* lastName
+	* findName
 
-Address
-    zipCode
-    zipCodeFormat
-    city
-    streetName
-    streetAddress
-    secondaryAddress
-    brState
-    ukCounty
-    ukCountry
-    usState
-    latitude
-    longitude
+* Address
+	* zipCode
+	* zipCodeFormat
+	* city
+	* streetName
+	* streetAddress
+	* secondaryAddress
+	* brState
+	* ukCounty
+	* ukCountry
+	* usState
+	* latitude
+	* longitude
 
-PhoneNumber
-    phoneNumber
-    phoneNumberFormat
+* PhoneNumber
+	* phoneNumber
+	* phoneNumberFormat
 
-Internet
-    email
-    userName
-    domainName
-    domainWord
-    ip
+* Internet
+	* email
+	* userName
+	* domainName
+	* domainWord
+	* ip
 
-Company
-    suffixes
-    companyName
-    companySuffix
-    catchPhrase
-    bs
+* Company
+	* suffixes
+	* companyName
+	* companySuffix
+	* catchPhrase
+	* bs
 
-Lorem
-    words
-    sentence
-    sentences
-    paragraph
-    paragraphs
+* Lorem
+	* words
+	* sentence
+	* sentences
+	* paragraph
+	* paragraphs
