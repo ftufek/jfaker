@@ -7,16 +7,16 @@ public class Lorem {
 		runtime = r;
 	}
 	
-	public String words(){
+	public String[] words(){
 		return words(3);
 	}
 	
-	public String words(int n){
-		return runtime.evalStr("Lorem", "words", Integer.toString(n));
+	public String[] words(int n){
+		return runtime.evalArr("Lorem", "words", Integer.toString(n));
 	}
 	
 	public String sentence(){
-		return words(3);
+		return sentence(3);
 	}
 	
 	public String sentence(int n){
@@ -24,7 +24,7 @@ public class Lorem {
 	}
 
 	public String sentences(){
-		return words(3);
+		return sentences(3);
 	}
 	
 	public String sentences(int n){
@@ -32,7 +32,7 @@ public class Lorem {
 	}
 
 	public String paragraph(){
-		return words(3);
+		return paragraph(3);
 	}
 	
 	public String paragraph(int n){
@@ -40,7 +40,7 @@ public class Lorem {
 	}
 
 	public String paragraphs(){
-		return words(3);
+		return paragraphs(3);
 	}
 	
 	public String paragraphs(int n){
