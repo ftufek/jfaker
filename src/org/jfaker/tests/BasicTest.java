@@ -20,9 +20,7 @@ public class BasicTest {
 
 	@Test
 	public void test() throws ScriptException {
-		for (String s : faker.Company.suffixes()) {
-			p(s);
-		}
+		p(faker.Lorem.paragraphs(100));
 	}
 
 }
