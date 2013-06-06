@@ -11,9 +11,15 @@ public class Address {
 		return runtime.evalStr("Address", "zipCode");
 	}
 
-//	public String zipCodeFormat() {
-//		return runtime.evalStr("Address", "zipCodeFormat");
-//	}
+	/**
+	 * 
+	 * @param format 0 means format of #####
+	 * 				 1 means format of #####-####
+	 * @return
+	 */
+	public String zipCodeFormat(int format) {
+		return runtime.evalStr("Address", "zipCodeFormat",Integer.toString(format));
+	}
 
 	public String city() {
 		return runtime.evalStr("Address", "city");

@@ -7,6 +7,8 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
+import sun.org.mozilla.javascript.internal.NativeArray;
+
 public class Runtime {
 	private ScriptEngine engine;
 	
@@ -31,11 +33,34 @@ public class Runtime {
 	 * @return
 	 */
 	public String evalStr(String module, String function) {
+		return evalStr(module, function, "");
+	}
+	
+	public String evalStr(String module, String function, String args) {
 		try {
-			engine.eval("var temp = (Faker." + module + "." + function + "())");
+			engine.eval("var temp = (Faker." + module + "." + function + "("+args+"))");
 		} catch (ScriptException e) {
 			e.printStackTrace();
 		}
 		return (String) engine.get("temp");
+	}
+	
+	public String[] evalArr(String module, String function){
+		return evalArr(module, function, "");
+	}
+	
+	public String[] evalArr(String module, String function, String args){
+		try {
+			engine.eval("var temp = (Faker." + module + "." + function + "("+args+"))");
+		} catch (ScriptException e) {
+			e.printStackTrace();
+		}
+		NativeArray na = (NativeArray) engine.get("temp");
+		String[] s = new String[(int) na.getLength()];
+		for (Object n : na.getIds()) {
+			int index = (Integer) n;
+			s[index] = (String) na.get(n);
+		}
+		return s;
 	}
 }
