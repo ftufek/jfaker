@@ -20,7 +20,7 @@ public class BasicTest {
 
 	@Test
 	public void test() throws ScriptException {
-		p(faker.evalStr("Company", "suffixes"));
+		p(faker.Name.firstName());
 	}
 
 }
