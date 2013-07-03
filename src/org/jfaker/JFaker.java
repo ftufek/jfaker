@@ -2,6 +2,7 @@ package org.jfaker;
 
 import org.jfaker.internal.Address;
 import org.jfaker.internal.Company;
+import org.jfaker.internal.Helper;
 import org.jfaker.internal.Internet;
 import org.jfaker.internal.Lorem;
 import org.jfaker.internal.Name;
@@ -17,6 +18,7 @@ public class JFaker {
 	public Internet Internet;
 	public Company Company;
 	public Lorem Lorem;
+	public Helper Helper;
 
 	public JFaker() {
 		runtime = new Runtime();
@@ -27,5 +29,6 @@ public class JFaker {
 		Internet = new Internet(runtime);
 		Company = new Company(runtime);
 		Lorem = new Lorem(runtime);
+		Helper = new Helper();
 	}	
 }
